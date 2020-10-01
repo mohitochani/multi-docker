@@ -5,16 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 
-const Handlebars = require('handlebars')
-const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
-const exphbs = require('express-handlebars');
 
-app.engine('handlebars', exphbs({
-  defaultLayout: 'home',
-  handlebars: allowInsecurePrototypeAccess(Handlebars)
- }));
- app.set('view engine', 'handlebars');
- 
 class App extends Component {
   render() {
     return (
