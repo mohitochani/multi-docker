@@ -21,7 +21,7 @@ class Fib extends Component {
   async fetchIndexes() {
     const seenIndexes = await axios.get('/api/values/all');
     this.setState({
-      seenIndexes: seenIndexes.data
+      seenIndexes: seenIndexes && seenIndexes.data ? seenIndexes.data : []
     });
   }
 
@@ -65,10 +65,10 @@ class Fib extends Component {
         </form>
 
         <h3>Indexes I have seen:</h3>
-        { /*this.renderSeenIndexes()*/}
+        { this.renderSeenIndexes()*/}
 
         <h3>Calculated Values:</h3>
-        { /*this.renderValues() */}
+        { this.renderValues()}
       </div>
     );
   }
